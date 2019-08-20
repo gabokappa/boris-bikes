@@ -2,4 +2,4 @@ Objects  | Messages
 ------------- | -------------
 Person |
 DockingStation | release_bike
-Bike | condition
+Bike | working?
