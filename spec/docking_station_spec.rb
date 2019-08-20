@@ -1,4 +1,4 @@
-require "docking_station"
+require "./lib/docking_station"
 
 describe DockingStation do
   let(:docking_station) { DockingStation.new }
@@ -13,5 +13,11 @@ describe DockingStation do
 
   it "releases a working bike" do
     expect(docking_station.release_bike.working?).to eq true
+  end
+
+  it "docks a bike" do
+    bike = Bike.new
+    docking_station.dock_bike(bike)
+    expect(docking_station.bikes).to include bike
   end
 end
