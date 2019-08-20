@@ -15,6 +15,10 @@ describe DockingStation do
     expect(docking_station.release_bike.working?).to eq true
   end
 
+  it "responds to dock_bike" do
+    expect(docking_station).to respond_to "dock_bike"
+  end
+
   it "docks a bike" do
     bike = Bike.new
     docking_station.dock_bike(bike)
